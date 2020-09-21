@@ -298,3 +298,19 @@ const bondFilms = [
   }
 
   console.log(oddBonds);
+
+  /* 
+  
+  7. Determine the total cumulative gross of the Bond franchise, and console.log the result.
+  
+  */
+
+  let grossSum = 0;
+
+  for (let i = 0; i < bondFilms.length; i++) {
+    const regex = /\D/g;
+    const numbers = Number(bondFilms[i].gross.replace(regex, ''));
+    grossSum += numbers;
+  }
+
+  console.log(grossSum);
